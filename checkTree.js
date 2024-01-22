@@ -36,8 +36,8 @@ const checkTree = (tree, value) => {
   let res = false;
   const { value: treeValue, ...rest } = tree;
   if (treeValue === value) return true;
-  for (let a in rest) {
-    const res = checkTree(rest[a], value);
+  for (let key in rest) {
+    const res = checkTree(rest[key], value);
     if (res) {
       return res;
     }
